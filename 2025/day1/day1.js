@@ -37,8 +37,6 @@ const solvePuzzle2 = (lines, testing) => {
     lines = getLinesFromPath("day1/input.txt")
   }
   const numArr = getNumArrFromLines(lines)
-  // read input, convert R to + and L to -.
-  // then add numbers using % 100, count each time you reach zero
 
   let dialNum = 50
   let ret = 0
@@ -64,7 +62,6 @@ const solvePuzzle2 = (lines, testing) => {
     if (dialNum === 0) {
       lastWasZero = true
       loops === 0 ? ret++ : ''
-      continue
     }
   }
 
