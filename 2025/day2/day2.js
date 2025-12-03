@@ -71,25 +71,21 @@ const getInvalidNumberFromRanges2 = (ranges) => {
 
   for (let i = 0; i < ranges.length; i++) { // loops over ranges
     const { start, end } = ranges[i]
-    for (let j = start; j < end + 1; j++) { // loops inside each range
-      let invalid = false
+    for (let j = start; j <= end ; j++) { // loops inside each range
       const jString = `${j}`
       const length = jString.length
 
-      // console.log('testing string: ', j)
-      for (let mod = 2; mod <= length; mod++) {
+      for (let mod = 2; mod <= length; mod++) { // loops each partition of the string
         if (length % mod === 0) {
-          // console.log('splits in: ', mod)
           const iterations = length / mod
           const set = new Set()
           const arr = []
-          for (let stringStart = 0, stringEnd = length / mod; stringEnd <= length; stringStart = stringEnd, stringEnd += iterations) {
-            // console.log('adding string: ', jString.slice(stringStart, stringEnd), ' from index: ', stringStart, ' to index: ', stringEnd)
-            set.add(jString.slice(stringStart, stringEnd))
-            arr.push(jString.slice(stringStart, stringEnd))
+          for (let stringStart = 0, stringEnd = iterations; stringEnd <= length && set.size <= 1; stringStart = stringEnd, stringEnd += iterations) { // loops each splitted part of the string
+            const testedPart = jString.slice(stringStart, stringEnd)
+            set.add(testedPart)
+            arr.push(testedPart)
           }
-          if (set.size === 1 && arr.length !== 1) {
-            // console.log('got one: ', j)
+          if (set.size === 1 && arr.length > 1) {
             invalids.push(j)
             break;
           }

@@ -39,9 +39,9 @@ const { solvePuzzle1: solvePuzzle1Day12, solvePuzzle2: solvePuzzle2Day12 } = req
 // })
 
 // describe("Day 2", () => {
-//     const testInput = [
-//         '11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124'
-//     ]
+//         const testInput = [
+//             '11-22,95-115,998-1012,1188511880-1188511890,222220-222224,1698522-1698528,446443-446449,38593856-38593862,565653-565659,824824821-824824827,2121212118-2121212124'
+//         ]
 // test("puzzle 1 test", () => {
 //     expect(solvePuzzle1Day2(testInput, true)).toBe(1227775554)
 // })
@@ -56,21 +56,26 @@ const { solvePuzzle1: solvePuzzle1Day12, solvePuzzle2: solvePuzzle2Day12 } = req
 // })
 // })
 
-// describe("Day 3", () => {
-//   const testInput = []
-//   test("puzzle 1 test", () => {
-//     expect(solvePuzzle1Day3(testInput, true)).toBe(0)
-//   })
-//    test("puzzle 1 forReal", () => {
-//     expect(solvePuzzle1Day3(testInput,false)).toBe(0)
-//   })
-//   test("puzzle 2 test", () => {
-//     expect(solvePuzzle2Day3(testInput, true)).toBe(0)
-//   })
-//    test("puzzle 2 forReal", () => {
-//     expect(solvePuzzle2Day3(testInput,false)).toBe(0)
-//   })
-// })
+describe("Day 3", () => {
+    const testInput = [
+        '987654321111111',
+        '811111111111119',
+        '234234234234278',
+        '818181911112111',
+    ]
+    test("puzzle 1 test", () => {
+        expect(solvePuzzle1Day3(testInput, true)).toBe(357)
+    })
+    test("puzzle 1 forReal", () => {
+        expect(solvePuzzle1Day3(testInput, false)).toBe(16812)
+    })
+    test("puzzle 2 test", () => {
+        expect(solvePuzzle2Day3(testInput, true)).toBe(3121910778619)
+    })
+    test("puzzle 2 forReal", () => {
+        expect(solvePuzzle2Day3(testInput, false)).toBe(166345822896410)
+    })
+})
 
 // describe("Day 4", () => {
 //   const testInput = []
