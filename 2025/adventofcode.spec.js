@@ -56,42 +56,53 @@ const { solvePuzzle1: solvePuzzle1Day12, solvePuzzle2: solvePuzzle2Day12 } = req
 // })
 // })
 
-describe("Day 3", () => {
+// describe("Day 3", () => {
+//     const testInput = [
+//         '987654321111111',
+//         '811111111111119',
+//         '234234234234278',
+//         '818181911112111',
+//     ]
+//     test("puzzle 1 test", () => {
+//         expect(solvePuzzle1Day3(testInput, true)).toBe(357)
+//     })
+//     test("puzzle 1 forReal", () => {
+//         expect(solvePuzzle1Day3(testInput, false)).toBe(16812)
+//     })
+//     test("puzzle 2 test", () => {
+//         expect(solvePuzzle2Day3(testInput, true)).toBe(3121910778619)
+//     })
+//     test("puzzle 2 forReal", () => {
+//         expect(solvePuzzle2Day3(testInput, false)).toBe(166345822896410)
+//     })
+// })
+
+describe("Day 4", () => {
     const testInput = [
-        '987654321111111',
-        '811111111111119',
-        '234234234234278',
-        '818181911112111',
+        '..@@.@@@@.',
+        '@@@.@.@.@@',
+        '@@@@@.@.@@',
+        '@.@@@@..@.',
+        '@@.@@@@.@@',
+        '.@@@@@@@.@',
+        '.@.@.@.@@@',
+        '@.@@@.@@@@',
+        '.@@@@@@@@.',
+        '@.@.@@@.@.',
     ]
-    test("puzzle 1 test", () => {
-        expect(solvePuzzle1Day3(testInput, true)).toBe(357)
-    })
-    test("puzzle 1 forReal", () => {
-        expect(solvePuzzle1Day3(testInput, false)).toBe(16812)
-    })
+    // test("puzzle 1 test", () => {
+    //     expect(solvePuzzle1Day4(testInput, true)).toBe(13)
+    // })
+    // test("puzzle 1 forReal", () => {
+    //     expect(solvePuzzle1Day4(testInput, false)).toBe(1523)
+    // })
     test("puzzle 2 test", () => {
-        expect(solvePuzzle2Day3(testInput, true)).toBe(3121910778619)
+        expect(solvePuzzle2Day4(testInput, true)).toBe(43)
     })
     test("puzzle 2 forReal", () => {
-        expect(solvePuzzle2Day3(testInput, false)).toBe(166345822896410)
+        expect(solvePuzzle2Day4(testInput, false)).toBe(9290)
     })
 })
-
-// describe("Day 4", () => {
-//   const testInput = []
-//   test("puzzle 1 test", () => {
-//     expect(solvePuzzle1Day4(testInput, true)).toBe(0)
-//   })
-//    test("puzzle 1 forReal", () => {
-//     expect(solvePuzzle1Day4(testInput,false)).toBe(0)
-//   })
-//   test("puzzle 2 test", () => {
-//     expect(solvePuzzle2Day4(testInput, true)).toBe(0)
-//   })
-//    test("puzzle 2 forReal", () => {
-//     expect(solvePuzzle2Day4(testInput,false)).toBe(0)
-//   })
-// })
 
 // describe("Day 5", () => {
 //   const testInput = []
