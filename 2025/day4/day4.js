@@ -67,6 +67,8 @@ const solvePuzzle2 = (lines, testing) => {
   if (!testing) {
     lines = getLinesFromPath("day4/input.txt")
   }
+
+  lines = lines.map(row => row.split(''))
   let removedTpCount = 0
   while (true) {
     const tps = getNumbOfToiletPapers(lines)
