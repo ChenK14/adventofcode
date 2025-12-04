@@ -19,8 +19,6 @@ const getNumbOfToiletPapers = (matrix) => {
   for (let row = 0; row < matrix.length; row++) {
     const isInBound = (newRow, newCol) => newRow >= 0 && newRow < matrix.length && newCol >= 0 && newCol < matrix[row].length
     for (let col = 0; col < matrix[row].length; col++) {
-
-
       if (matrix[row][col] === '@') {
         let tp = 0
         for (let dir = 0; dir < directions.length; dir++) {
@@ -55,26 +53,22 @@ const solvePuzzle1 = (lines, testing) => {
 
 
 const removeTpFromArray = (matrix, positions) => {
-  const shouldMark = (row, col) => positions.has(`${row},${col}`)
-
-  return matrix.map((row, rowIdx) =>
-    [...row]
-      .map((cell, colIdx) => shouldMark(rowIdx, colIdx) ? 'x' : cell)
-      .join('')
-  )
+  positions.forEach(val => {
+    const [row, col] = val.split(',').map(val => Number(val))
+    matrix[row][col] = 'x'
+  });
 }
 const solvePuzzle2 = (lines, testing) => {
   if (!testing) {
     lines = getLinesFromPath("day4/input.txt")
   }
 
-  lines = lines.map(row => row.split(''))
+  const matrix = lines.map(row => row.split(''))
   let removedTpCount = 0
   while (true) {
-    const tps = getNumbOfToiletPapers(lines)
-    lines = removeTpFromArray(lines, tps)
+    const tps = getNumbOfToiletPapers(matrix)
+    removeTpFromArray(matrix, tps)
     removedTpCount += tps.size
-
     if (tps.size === 0) {
       break;
     }
