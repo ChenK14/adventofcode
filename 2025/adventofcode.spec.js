@@ -154,18 +154,35 @@ const { solvePuzzle1: solvePuzzle1Day12, solvePuzzle2: solvePuzzle2Day12 } = req
 // })
 
 // describe("Day 7", () => {
-//   const testInput = []
+//   const testInput = [
+//     '.......S.......',
+//     '...............',
+//     '.......^.......',
+//     '...............',
+//     '......^.^......',
+//     '...............',
+//     '.....^.^.^.....',
+//     '...............',
+//     '....^.^...^....',
+//     '...............',
+//     '...^.^...^.^...',
+//     '...............',
+//     '..^...^.....^..',
+//     '...............',
+//     '.^.^.^.^.^...^.',
+//     '...............',
+//   ]
 //   test("puzzle 1 test", () => {
-//     expect(solvePuzzle1Day7(testInput, true)).toBe(0)
+//     expect(solvePuzzle1Day7(testInput, true)).toBe(21)
 //   })
 //    test("puzzle 1 forReal", () => {
-//     expect(solvePuzzle1Day7(testInput,false)).toBe(0)
+//     expect(solvePuzzle1Day7(testInput,false)).toBe(1546)
 //   })
 //   test("puzzle 2 test", () => {
-//     expect(solvePuzzle2Day7(testInput, true)).toBe(0)
+//     expect(solvePuzzle2Day7(testInput, true)).toBe(40)
 //   })
 //    test("puzzle 2 forReal", () => {
-//     expect(solvePuzzle2Day7(testInput,false)).toBe(0)
+//     expect(solvePuzzle2Day7(testInput,false)).toBe(13883459503480)
 //   })
 // })
 
