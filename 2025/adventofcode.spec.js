@@ -187,68 +187,128 @@ const { solvePuzzle1: solvePuzzle1Day12, solvePuzzle2: solvePuzzle2Day12 } = req
 // })
 
 // describe("Day 8", () => {
-//   const testInput = []
-//   test("puzzle 1 test", () => {
-//     expect(solvePuzzle1Day8(testInput, true)).toBe(0)
-//   })
-//    test("puzzle 1 forReal", () => {
-//     expect(solvePuzzle1Day8(testInput,false)).toBe(0)
-//   })
-//   test("puzzle 2 test", () => {
-//     expect(solvePuzzle2Day8(testInput, true)).toBe(0)
-//   })
-//    test("puzzle 2 forReal", () => {
-//     expect(solvePuzzle2Day8(testInput,false)).toBe(0)
-//   })
+//     const testInput = [
+//         '162,817,812',
+//         '57,618,57',
+//         '906,360,560',
+//         '592,479,940',
+//         '352,342,300',
+//         '466,668,158',
+//         '542,29,236',
+//         '431,825,988',
+//         '739,650,466',
+//         '52,470,668',
+//         '216,146,977',
+//         '819,987,18',
+//         '117,168,530',
+//         '805,96,715',
+//         '346,949,466',
+//         '970,615,88',
+//         '941,993,340',
+//         '862,61,35',
+//         '984,92,344',
+//         '425,690,689',
+//     ]
+//     test("puzzle 1 test", () => {
+//         expect(solvePuzzle1Day8(testInput, true)).toBe(40)
+//     })
+//        test("puzzle 1 forReal", () => {
+//         expect(solvePuzzle1Day8(testInput,false)).toBe(83520)
+//       })
+//       test("puzzle 2 test", () => {
+//         expect(solvePuzzle2Day8(testInput, true)).toBe(25272)
+//       })
+//        test("puzzle 2 forReal", () => {
+//         expect(solvePuzzle2Day8(testInput,false)).toBe(1131823407)
+//       })
 // })
 
 // describe("Day 9", () => {
-//   const testInput = []
+//   const testInput = [
+//     '7,1',
+//     '11,1',
+//     '11,7',
+//     '9,7',
+//     '9,5',
+//     '2,5',
+//     '2,3',
+//     '7,3',
+//   ]
 //   test("puzzle 1 test", () => {
-//     expect(solvePuzzle1Day9(testInput, true)).toBe(0)
+//     expect(solvePuzzle1Day9(testInput, true)).toBe(50)
 //   })
 //    test("puzzle 1 forReal", () => {
-//     expect(solvePuzzle1Day9(testInput,false)).toBe(0)
+//     expect(solvePuzzle1Day9(testInput,false)).toBe(4777409595)
 //   })
 //   test("puzzle 2 test", () => {
-//     expect(solvePuzzle2Day9(testInput, true)).toBe(0)
+//     expect(solvePuzzle2Day9(testInput, true)).toBe(24)
 //   })
 //    test("puzzle 2 forReal", () => {
-//     expect(solvePuzzle2Day9(testInput,false)).toBe(0)
+//     expect(solvePuzzle2Day9(testInput,false)).toBe(1473551379)
 //   })
 // })
 
 // describe("Day 10", () => {
-//   const testInput = []
-//   test("puzzle 1 test", () => {
-//     expect(solvePuzzle1Day10(testInput, true)).toBe(0)
-//   })
-//    test("puzzle 1 forReal", () => {
-//     expect(solvePuzzle1Day10(testInput,false)).toBe(0)
-//   })
-//   test("puzzle 2 test", () => {
-//     expect(solvePuzzle2Day10(testInput, true)).toBe(0)
-//   })
-//    test("puzzle 2 forReal", () => {
-//     expect(solvePuzzle2Day10(testInput,false)).toBe(0)
-//   })
+//     const testInput = [
+//         '[.##.] (3) (1,3) (2) (2,3) (0,2) (0,1) {3,5,4,7}',
+//         '[...#.] (0,2,3,4) (2,3) (0,4) (0,1,2) (1,2,3,4) {7,5,12,7,2}',
+//         '[.###.#] (0,1,2,3,4) (0,3,4) (0,1,2,4,5) (1,2) {10,11,11,5,10,5}',
+//     ]
+// test("puzzle 1 test", () => {
+//     expect(solvePuzzle1Day10(testInput, true)).toBe(7)
+// })
+// test("puzzle 1 forReal", () => {
+//     expect(solvePuzzle1Day10(testInput, false)).toBe(0)
+// })
+//     test("puzzle 2 test", () => {
+//         expect(solvePuzzle2Day10(testInput, true)).toBe(33)
+//     })
+//     test("puzzle 2 forReal", () => {
+//         expect(solvePuzzle2Day10(testInput, false)).toBe(18981)
+//     })
 // })
 
-// describe("Day 11", () => {
-//   const testInput = []
-//   test("puzzle 1 test", () => {
-//     expect(solvePuzzle1Day11(testInput, true)).toBe(0)
-//   })
-//    test("puzzle 1 forReal", () => {
-//     expect(solvePuzzle1Day11(testInput,false)).toBe(0)
-//   })
-//   test("puzzle 2 test", () => {
-//     expect(solvePuzzle2Day11(testInput, true)).toBe(0)
-//   })
-//    test("puzzle 2 forReal", () => {
-//     expect(solvePuzzle2Day11(testInput,false)).toBe(0)
-//   })
-// })
+describe("Day 11", () => {
+    const testInput = [
+        'aaa: you hhh',
+        'you: bbb ccc',
+        'bbb: ddd eee',
+        'ccc: ddd eee fff',
+        'ddd: ggg',
+        'eee: out',
+        'fff: out',
+        'ggg: out',
+        'hhh: ccc fff iii',
+        'iii: out',
+    ]
+    const testInput2 = [
+        'svr: aaa bbb',
+        'aaa: fft',
+        'fft: ccc',
+        'bbb: tty',
+        'tty: ccc',
+        'ccc: ddd eee',
+        'ddd: hub',
+        'hub: fff',
+        'eee: dac',
+        'dac: fff',
+        'fff: ggg hhh',
+        'ggg: out',
+        'hhh: out',
+    ]
+    test("puzzle 1 test", () => {
+        expect(solvePuzzle1Day11(testInput, true)).toBe(5)
+    })
+    test("puzzle 1 forReal", () => {
+        expect(solvePuzzle1Day11(testInput, false)).toBe(539)
+    })
+    test("puzzle 2 test", () => {
+        expect(solvePuzzle2Day11(testInput2, true)).toBe(2)
+    })
+    test("puzzle 2 forReal", () => {
+        expect(solvePuzzle2Day11(testInput2, false)).toBe(0)
+    })
+})
 
 // describe("Day 12", () => {
 //   const testInput = []
